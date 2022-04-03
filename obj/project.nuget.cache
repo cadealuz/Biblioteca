@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Ozphja71MJZKO0uSr9l8BCi6+p+dVGk75xe7jvfG++twRe3GRLankilDifKZdt8Nx5Jj9w2Kt3VgKj61nkPxlw==",
+  "dgSpecHash": "QpjTKMpAmQORtGbA7fhihzK6DzITlu4vcIVI4e9mauzf6qopTNY+on27y7YklieJ1YfHv4bQxka7ZSVu0E5MQQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\cadea\\Desktop\\Senac\\UC07\\Atv 01 - Gleisson Trindade\\Biblioteca\\Biblioteca.csproj",
+  "projectFilePath": "C:\\Users\\cadea\\Desktop\\Senac\\UC07\\Atv 02 - Gleisson Trindade\\Biblioteca\\Biblioteca.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\cadea\\.nuget\\packages\\microsoft.csharp\\4.6.0\\microsoft.csharp.4.6.0.nupkg.sha512",
     "C:\\Users\\cadea\\.nuget\\packages\\microsoft.entityframeworkcore\\3.0.0\\microsoft.entityframeworkcore.3.0.0.nupkg.sha512",

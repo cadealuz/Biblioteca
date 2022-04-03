@@ -850,11 +850,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\cadea\\Desktop\\Senac\\UC07\\Atv 01 - Gleisson Trindade\\Biblioteca\\Biblioteca.csproj",
+      "projectUniqueName": "C:\\Users\\cadea\\Desktop\\Senac\\UC07\\Atv 02 - Gleisson Trindade\\Biblioteca\\Biblioteca.csproj",
       "projectName": "Biblioteca",
-      "projectPath": "C:\\Users\\cadea\\Desktop\\Senac\\UC07\\Atv 01 - Gleisson Trindade\\Biblioteca\\Biblioteca.csproj",
+      "projectPath": "C:\\Users\\cadea\\Desktop\\Senac\\UC07\\Atv 02 - Gleisson Trindade\\Biblioteca\\Biblioteca.csproj",
       "packagesPath": "C:\\Users\\cadea\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\cadea\\Desktop\\Senac\\UC07\\Atv 01 - Gleisson Trindade\\Biblioteca\\obj\\",
+      "outputPath": "C:\\Users\\cadea\\Desktop\\Senac\\UC07\\Atv 02 - Gleisson Trindade\\Biblioteca\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\cadea\\AppData\\Roaming\\NuGet\\NuGet.Config"
