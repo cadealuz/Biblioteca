@@ -25,12 +25,11 @@ namespace Biblioteca.Models
                 emprestimo.LivroId = e.LivroId;
                 emprestimo.DataEmprestimo = e.DataEmprestimo;
                 emprestimo.DataDevolucao = e.DataDevolucao;
-                emprestimo.Devolvido = e.Devolvido;
 
                 bc.SaveChanges();
             }
         }
-        public ICollection<Emprestimo> ListarTodos(FiltrosEmprestimos filtro = null)
+        public ICollection<Emprestimo> ListarTodos(FiltrosEmprestimos filtro)
         {
             using(BibliotecaContext bc = new BibliotecaContext())
             {
@@ -42,11 +41,18 @@ namespace Biblioteca.Models
                     switch(filtro.TipoFiltro)
                     {
                         case "Usuario":
-                            query = bc.Emprestimos.Where(l => l.NomeUsuario.Contains(filtro.Filtro));
+                            query = bc.Emprestimos.Where(e => e.NomeUsuario.Contains(filtro.Filtro));
                         break;
 
                         case "Livro":
-                            query = bc.Emprestimos.Where(l => l.Livro.Titulo.Contains(filtro.Filtro));
+                            List<Livro> LivrosFiltrados = bc.Livros.Where(l => l.Titulo.Contains(filtro.Filtro)).ToList();
+
+                            List<int>LivrosIds = new List<int>();
+                            for (int i = 0; i < LivrosFiltrados.Count; i++)
+                            {LivrosIds.Add(LivrosFiltrados[i].Id);}
+
+                            query = bc.Emprestimos.Where(e => LivrosIds.Contains(e.LivroId));
+                            var debug = query.ToList();
                         break;
 
                         default:
@@ -59,9 +65,16 @@ namespace Biblioteca.Models
                     // caso filtro não tenha sido informado
                     query = bc.Emprestimos;
                 }
-                
-                //ordenação padrão
-                return query.Include(e => e.Livro).ToList().OrderBy(e => e.NomeUsuario).ToList();
+
+                //List<Emprestimo>ListaConsulta = query.OrderBy(e => e.DataEmprestimo).ToList();
+
+                //for(int i = 0; i > ListaConsulta.Count; i++)
+               // {
+               //     ListaConsulta[i].Livro = bc.Livros.Find(ListaConsulta[i].LivroId);
+               // }
+
+              //  return ListaConsulta;
+              return query.Include(e => e.Livro).ToList().OrderBy(e => e.NomeUsuario).ToList();
             }
         }
 
